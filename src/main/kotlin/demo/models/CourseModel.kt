@@ -14,5 +14,12 @@ data class CourseModel(
     var name: String,
 
     @Column(nullable = false)
-    var description: String
-)
+    var description: String,
+
+    @OneToMany
+    var jobList: MutableList<JobModel> = mutableListOf()
+){
+    fun addJobToCourse(newJob: JobModel){
+        jobList.add(newJob)
+    }
+}

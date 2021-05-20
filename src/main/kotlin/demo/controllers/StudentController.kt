@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param
 import org.springframework.web.bind.annotation.*
 
 @RestController
+@CrossOrigin(origins = ["*"])
 @RequestMapping("/students")
 class StudentController {
 
