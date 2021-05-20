@@ -11,8 +11,8 @@ data class CourseModel(
     val id: Long,
 
     @Column(nullable = false)
-    var courseName: String,
+    var name: String,
 
     @Column(nullable = false)
-    var courseDescription: String
+    var description: String
 )
