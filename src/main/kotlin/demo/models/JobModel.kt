@@ -20,7 +20,7 @@ data class JobModel(
     @Column(nullable = false)
     val dueDate: Date,
 
-    @ManyToOne
-    @JoinColumn(name = "course_id", nullable = false)
-    var courseModel: CourseModel?
+//    @ManyToOne
+//    @JoinColumn(name = "fk_course", nullable = false)
+//    var courseModel: CourseModel?
 )
