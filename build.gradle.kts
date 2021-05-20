@@ -19,21 +19,21 @@ repositories {
 
 dependencies {
 	//Springboot para servidor web
-	implementation("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.boot:spring-boot-starter-web")
 	//Springboot para manejo de servidor en instancia de apache tomcat
-	implementation("org.springframework.boot:spring-boot-starter-tomcat")
+	compile("org.springframework.boot:spring-boot-starter-tomcat")
 	//Springboot para manejo de anotaciones de servicios web
-	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+	compile("org.springframework.boot:spring-boot-starter-data-jdbc")
 	//Springboot para manejo de etiquetas de JPA e Hibernate
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	compile("org.springframework.boot:spring-boot-starter-data-jpa")
 	//Librerias necesarias para el manejo de kotlin
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	compile("org.jetbrains.kotlin:kotlin-reflect")
+	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	//Libreria para el parseo de JSON en java
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	compile("com.fasterxml.jackson.module:jackson-module-kotlin")
 	//Libreria para conexion de BD de mysql
-	implementation("mysql:mysql-connector-java")
-	implementation ("org.postgresql:postgresql:42.2.10")
+	compile("mysql:mysql-connector-java")
+	compile ("org.postgresql:postgresql:42.2.10")
 }
 
 tasks.withType<KotlinCompile> {
