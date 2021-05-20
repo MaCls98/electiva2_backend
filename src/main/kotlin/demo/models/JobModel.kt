@@ -4,14 +4,14 @@ import java.util.*
 import javax.persistence.*
 
 @Entity
-@Table(name = "JOB")
+@Table(name = "job")
 data class JobModel(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     val id: Long,
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     val title: String,
 
     @Column(nullable = false)
@@ -20,7 +20,6 @@ data class JobModel(
     @Column(nullable = false)
     val dueDate: Date,
 
-//    @ManyToOne
-//    @JoinColumn(name = "fk_course", nullable = false)
-//    var courseModel: CourseModel?
+    @OneToOne
+    var gradeModel: GradeModel?
 )

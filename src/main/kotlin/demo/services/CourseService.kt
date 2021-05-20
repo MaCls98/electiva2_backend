@@ -14,17 +14,13 @@ class CourseService {
 
     @Autowired
     private lateinit var courseRepository: CourseRepository
-    @Autowired
-    private lateinit var jobRepository: JobRepository
 
     fun addJobToCourse(courseId: Long, newJob: JobModel): CourseModel?{
         val course = courseRepository.findById(courseId)
-//        if (course.isPresent){
-//            val job = newJob.apply {
-//                courseModel = course.get()
-//            }
-//            course.get().addJobToCourse(job)
-//        }
+        if (course.isPresent){
+            course.get().addJobToCourse(newJob)
+            courseRepository.save(course.get())
+        }
         return course.get()
     }
 

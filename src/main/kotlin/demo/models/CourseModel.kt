@@ -3,7 +3,7 @@ package demo.models
 import javax.persistence.*
 
 @Entity
-@Table(name = "COURSE")
+@Table(name = "course")
 data class CourseModel(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,10 +16,10 @@ data class CourseModel(
     @Column(nullable = false)
     var description: String,
 
-//    @OneToMany
-//    var jobList: MutableList<JobModel> = mutableListOf()
+    @OneToMany(cascade = [CascadeType.ALL])
+    var jobList: MutableList<JobModel> = mutableListOf()
 ){
-//    fun addJobToCourse(newJob: JobModel){
-//        jobList.add(newJob)
-//    }
+    fun addJobToCourse(newJob: JobModel){
+        jobList.add(newJob)
+    }
 }
