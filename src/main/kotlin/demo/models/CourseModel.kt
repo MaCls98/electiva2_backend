@@ -10,7 +10,7 @@ data class CourseModel(
     @Column(unique = true, nullable = false)
     val id: Long,
 
-    @Column(nullable = false)
+    @Column(unique = true, nullable = false)
     var name: String,
 
     @Column(nullable = false)
